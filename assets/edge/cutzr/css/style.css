@@ -1,0 +1,92 @@
+@font-face {
+    font-family             : 'Ubuntu';
+    font-style              : normal;
+    font-weight             : 400;
+    src                     : local('Ubuntu'), url(../../bootstrap/united/Ubuntu.woff) format('woff');
+}
+
+body {
+    padding-top             : 20px;
+    padding-bottom          : 50px;
+}
+
+.head {
+    margin                  : 60px 0px 0px 0px;
+    text-align              : center;
+}
+
+.head .lead {
+    margin-top              : -10px;
+    font-size               : 24px;
+    line-height             : 1.25;
+    letter-spacing          : 0px;
+}
+
+.video-reproduction-settings {
+    text-align              : left;
+}
+
+.video-output, .video-address {
+    text-align              : center;
+}
+
+.video-output .row, .ready {
+    margin-top              : 10px; 
+}
+
+#footer p {
+    margin                  : 0px;
+}
+
+.footer-content {
+    margin-left             : 10px; 
+}
+
+#footer a:hover {
+    text-decoration         : none;
+}
+
+#footer img[alt='YouTube'] {
+    height                  : 40px;
+}
+
+#footer img[alt='Facebook'] {
+    height                  : 38px; 
+}
+
+.errors-list, .social {
+    padding-top             : 10px; 
+}
+
+.icon {
+    background-image        : url('../img/icons.png');
+    background-repeat       : no-repeat;
+    display                 : inline-block;
+}
+
+.icon-chrome {
+    width                   : 128px;
+    height                  : 128px;
+    background-position     : 0 0;
+}
+
+.icon-facebook {
+    width                   : 48px;
+    height                  : 48px;
+    background-position     : -128px 0;
+}
+
+.icon-youtube {
+    width                   : 40px;
+    height                  : 40px;
+    background-position     : -128px -48px;
+    margin-top              : 5px;
+}
+
+
+a#github-ribbon img {
+    position                : absolute; 
+    top                     : 0; 
+    right                   : 0; 
+    border                  : 0;
+}

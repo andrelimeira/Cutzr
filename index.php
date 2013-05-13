@@ -57,7 +57,7 @@
                 $errors[] = _('Não conseguimos cortar o vídeo do YouTube, provavelmente o link informado é inválido!');
             } else {
                 $dataSourceName = 'mysql:host=localhost;dbname=cutzr;charset=utf8';
-                $videoStorage = new MySQLYouTubeVideoStorage(new PDO($dataSourceName, 'cutzr', NULL));
+                $videoStorage = new MySQLYouTubeVideoStorage(new PDO($dataSourceName, 'root', NULL));
                 $videoStorage->store($youTubeVideo);
 
                 $videoOutputQueryString = array_merge($videoOutputQueryString, array(
@@ -103,13 +103,13 @@
         <meta name="robots" content="index,follow" />
         <meta name="description" content="Corte vídeos do YouTube instantaneamente, de forma intuitiva e rápida!" />
         <meta name="keywords" content="cortar vídeos, vídeos youtube, youtube, cortar, trecho, pedaço, trecho do vídeo" />
-        <!--         
-            Open Graph Protocol (http://ogp.me)
-            <meta name="og:title" content="Cutzr" />
-            <meta name="og:type" content="website" />
-            <meta name="og:image" content="assets/edge/cutzr/img/Youtube.png" />
-            <meta name="og:url" content="?" />
-        -->
+        
+        <meta property="og:title" name="og:title" content="Cutzr" />
+        <meta property="og:type" name="og:type" content="website" />
+        <meta property="og:image" name="og:image" content="http://cutzr.starth.com.br/assets/edge/cutzr/img/Cutzr.ico" />
+        <meta property="og:url" name="og:url" content="http://cutzr.starth.com.br" />
+        <meta property="og:description" name="og:description" content="Corte vídeos do YouTube instantaneamente, de forma intuitiva e rápida!" />
+    
         <link rel="icon" href="assets/edge/cutzr/img/Cutzr.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="assets/edge/cutzr/img/Cutzr.ico" type="image/x-icon" />
         <link rel="stylesheet" href="assets/edge/bootstrap/united/css/bootstrap.min.css" type="text/css" />
@@ -196,6 +196,7 @@
                                     </div>
                                 </div>
                                 <?php 
+                                    
                                     if(isset($errors) && ($c = count($errors))) {
                                         echo '<div class="span12">';
                                         echo '<hr />';
@@ -209,6 +210,7 @@
                                         
                                         echo '</div>';
                                         echo '</div>';
+                                        
                                     }
                                     echo PHP_EOL;
                                 ?>
@@ -226,6 +228,16 @@
                 js.src = '//connect.facebook.net/pt_BR/all.js#xfbml=1';
                 f.parentNode.insertBefore(js, f);
             }(document, 'script', 'facebook-jssdk'));
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-40871303-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
         </script>
     </body>
 </html>

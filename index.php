@@ -125,7 +125,7 @@
         <div class="container">
             <div class="head">
                 <h1>Corte um vídeo do YouTube :)</h1>
-                <p class="lead">Informe o tempo em que você quer que o vídeo começe e/ou termine!</p>
+                <p class="lead">Informe o tempo em que você quer que o vídeo comece e/ou termine!</p>
             </div>
             <div class="video">
                 <div class="row">
